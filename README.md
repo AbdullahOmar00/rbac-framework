@@ -1,50 +1,23 @@
-# Quarterly Access Review Checklist
+# RBAC Framework
 
-**Review Period:** [Q_ 20__]  
-**Reviewer:** [Name]  
-**Systems Covered:** [List systems]  
-**Date Completed:** [Date]  
+Templates and examples for designing role-based access control across enterprise systems. Built from real implementation experience managing access governance for 4 systems.
 
-## Pre-Review
+## Files
 
-- [ ] Pull current user list from each system
-- [ ] Pull last login dates for all active accounts
-- [ ] Identify accounts with no login in 90+ days
-- [ ] Cross-reference active accounts against current employee list (HR data)
+| File | Purpose |
+|------|---------|
+| `role_matrix_template.md` | Blank role-permission matrix to fill per system |
+| `access_review_checklist.md` | Quarterly access review checklist |
+| `erp_role_matrix.md` | Example: ERP system role definitions and permissions |
+| `least_privilege_policy.md` | Example: Least-privilege access policy |
 
-## Account Status Review
+## How I use these
 
-- [ ] Flag dormant accounts (90+ days no login) for deactivation
-- [ ] Confirm all terminated employees have been deactivated across all systems
-- [ ] Verify contractor/vendor accounts have valid expiration dates
-- [ ] Check for shared or generic accounts — document business justification if any remain
+When onboarding a new system or running a quarterly access review, I start with the templates and adapt them to the specific platform. The role matrix maps every role to its exact permissions, which makes it easy to spot over-provisioned accounts.
 
-## Role and Permission Review
+## Key principles
 
-- [ ] Compare current role assignments against the approved role matrix
-- [ ] Flag any users with admin access outside IT/Security departments
-- [ ] Identify users with access to multiple conflicting roles (separation of duties)
-- [ ] Verify new hires received correct role based on their job function and department
-
-## Findings
-
-| Finding | System | User(s) Affected | Severity | Action Taken |
-|---------|--------|-------------------|----------|-------------|
-| | | | | |
-| | | | | |
-
-## Summary
-
-- Total accounts reviewed: ___
-- Dormant accounts found: ___
-- Accounts deactivated: ___
-- Role mismatches found: ___
-- Role corrections made: ___
-
-## Sign-Off
-
-| Name | Role | Signature | Date |
-|------|------|-----------|------|
-| | Reviewer | | |
-| | System Owner | | |
-| | IT Manager | | |
+1. **Least privilege** — Users get the minimum access needed for their job function
+2. **Separation of duties** — No single role should have both request and approval rights
+3. **Regular reviews** — Quarterly reviews catch dormant accounts and role drift
+4. **Document everything** — Every access decision should be traceable to a business justification
